@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Image Analysis Result</title>
+</head>
+<body>
+    <h1>Image Analysis Result</h1>
+    <h2>Captions:</h2>
+    {% if captions %}
+        <ul>
+            {% for caption in captions %}
+                <li>{{ caption }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No captions found.</p>
+    {% endif %}
+    <h2>Text:</h2>
+    {% if texts %}
+        <ul>
+            {% for text in texts %}
+                <li>{{ text }}</li>
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p>No text found.</p>
+    {% endif %}
+</body>
+</html>
